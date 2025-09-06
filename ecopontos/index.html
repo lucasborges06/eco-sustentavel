@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoPontos — Sua guia de coleta seletiva</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html">♻️ EcoPontos</a>
+    <input id="menu-toggle" type="checkbox" />
+    <label class="hamburger" for="menu-toggle">☰</label>
+    <nav class="menu">
+      <a href="index.html" class="active">Início</a>
+      <a href="pontos.html">Mapa</a>
+      <a href="dicas.html">Dicas</a>
+      <a href="cadastro.html" class="btn">Cadastrar ponto</a>
+      <a class="wa" href="https://wa.me/5531999999999" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero container">
+    <div class="hero-text">
+      <h1>Encontre pontos de <span class="highlight">coleta seletiva</span> perto de você</h1>
+      <p>Contribua para um mundo mais limpo. Descubra EcoPontos no mapa, aprenda a separar resíduos e cadastre novos locais de coleta.</p>
+      <div class="actions">
+        <a class="btn primary" href="pontos.html">Ver mapa</a>
+        <a class="btn ghost" href="dicas.html">Como reciclar</a>
+      </div>
+      <div class="stats">
+        <div><strong id="stat-pontos">0</strong><span>Pontos ativos</span></div>
+        <div><strong id="stat-cidades">0</strong><span>Cidades cobertas</span></div>
+        <div><strong id="stat-materiais">7</strong><span>Tipos de materiais</span></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Materiais aceitos</h3>
+      <ul class="tags">
+        <li>Plástico</li><li>Papel</li><li>Vidro</li><li>Metal</li>
+        <li>Orgânico</li><li>Eletrônicos</li><li>Óleo</li>
+      </ul>
+      <p class="muted">Confira no mapa quais materiais cada ponto recebe.</p>
+    </div>
+  </section>
+
+  <section class="features container">
+    <article class="card">
+      <h3>Mapa interativo</h3>
+      <p>Visualize pontos próximos, filtre por materiais e trace rotas com um clique.</p>
+      <a href="pontos.html" class="link">Abrir mapa →</a>
+    </article>
+    <article class="card">
+      <h3>Dicas práticas</h3>
+      <p>Aprenda a separar resíduos corretamente e evite contaminação dos recicláveis.</p>
+      <a href="dicas.html" class="link">Ver dicas →</a>
+    </article>
+    <article class="card">
+      <h3>Cadastre um ponto</h3>
+      <p>Ajude a comunidade adicionando novos locais de coleta na sua cidade.</p>
+      <a href="cadastro.html" class="link">Cadastrar →</a>
+    </article>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Juntos, aceleramos a economia circular</h2>
+      <p>Compartilhe o EcoPontos com amigos, vizinhos e comércios do seu bairro.</p>
+      <a href="cadastro.html" class="btn primary">Cadastrar um novo ponto</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="logo">♻️ EcoPontos</div>
+      <p class="muted">Projeto comunitário e open source. Dados salvos no seu navegador.</p>
+    </div>
+    <nav>
+      <h4>Mapa</h4>
+      <a href="pontos.html">Ver pontos</a>
+      <a href="cadastro.html">Adicionar ponto</a>
+    </nav>
+    <nav>
+      <h4>Conteúdo</h4>
+      <a href="dicas.html#separacao">Separação</a>
+      <a href="dicas.html#eletronicos">Eletrônicos</a>
+      <a href="dicas.html#oleo">Óleo de cozinha</a>
+    </nav>
+  </div>
+  <div class="copy">© <span id="year"></span> EcoPontos</div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

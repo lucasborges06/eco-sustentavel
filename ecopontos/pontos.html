@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoPontos — Mapa de Coleta</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <style>
+    #map { width: 100%; height: 520px; border-radius: 20px; }
+    .leaflet-container { font: inherit; }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html">♻️ EcoPontos</a>
+    <input id="menu-toggle" type="checkbox" />
+    <label class="hamburger" for="menu-toggle">☰</label>
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="pontos.html" class="active">Mapa</a>
+      <a href="dicas.html">Dicas</a>
+      <a href="cadastro.html" class="btn">Cadastrar ponto</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Mapa de EcoPontos</h1>
+  <p class="muted">Use os filtros para encontrar pontos que aceitam materiais específicos.</p>
+
+  <div class="filters">
+    <select id="material-filter">
+      <option value="all">Todos os materiais</option>
+      <option value="Plástico">Plástico</option>
+      <option value="Papel">Papel</option>
+      <option value="Vidro">Vidro</option>
+      <option value="Metal">Metal</option>
+      <option value="Orgânico">Orgânico</option>
+      <option value="Eletrônicos">Eletrônicos</option>
+      <option value="Óleo">Óleo</option>
+    </select>
+    <input id="search-city" type="search" placeholder="Buscar por cidade...">
+    <button class="btn" id="btn-geolocate">Usar minha localização</button>
+  </div>
+
+  <div id="map"></div>
+
+  <div class="list">
+    <h2>Lista de pontos</h2>
+    <div id="points-list" class="cards-grid"></div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="copy">© <span id="year"></span> EcoPontos</div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="js/script.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', initMapPage);
+</script>
+</body>
+</html>

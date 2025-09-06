@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoPontos — Cadastrar Ponto</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="index.html">♻️ EcoPontos</a>
+    <input id="menu-toggle" type="checkbox" />
+    <label class="hamburger" for="menu-toggle">☰</label>
+    <nav class="menu">
+      <a href="index.html">Início</a>
+      <a href="pontos.html">Mapa</a>
+      <a href="dicas.html">Dicas</a>
+      <a href="cadastro.html" class="active btn">Cadastrar ponto</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Cadastrar novo ponto</h1>
+  <p class="muted">Os dados ficam salvos no seu navegador (localStorage). Após salvar, você será redirecionado para o mapa.</p>
+
+  <form id="form-ponto" class="form card">
+    <div class="grid">
+      <label>Nome do local
+        <input required name="nome" placeholder="Ex.: Ecoponto Savassi">
+      </label>
+      <label>Cidade
+        <input required name="cidade" placeholder="Ex.: Belo Horizonte">
+      </label>
+    </div>
+    <div class="grid">
+      <label>Latitude
+        <input required step="any" name="lat" type="number" placeholder="-19.932">
+      </label>
+      <label>Longitude
+        <input required step="any" name="lng" type="number" placeholder="-43.937">
+      </label>
+    </div>
+    <label>Materiais aceitos</label>
+    <div class="chips">
+      <label><input type="checkbox" name="materiais" value="Plástico">Plástico</label>
+      <label><input type="checkbox" name="materiais" value="Papel">Papel</label>
+      <label><input type="checkbox" name="materiais" value="Vidro">Vidro</label>
+      <label><input type="checkbox" name="materiais" value="Metal">Metal</label>
+      <label><input type="checkbox" name="materiais" value="Orgânico">Orgânico</label>
+      <label><input type="checkbox" name="materiais" value="Eletrônicos">Eletrônicos</label>
+      <label><input type="checkbox" name="materiais" value="Óleo">Óleo</label>
+    </div>
+
+    <label>Observações
+      <textarea name="obs" rows="3" placeholder="Horário de funcionamento, contato etc."></textarea>
+    </label>
+
+    <button class="btn primary" type="submit">Salvar ponto</button>
+  </form>
+</main>
+
+<footer class="footer">
+  <div class="copy">© <span id="year"></span> EcoPontos</div>
+</footer>
+<script src="js/script.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', initCadastroPage);
+</script>
+</body>
+</html>
