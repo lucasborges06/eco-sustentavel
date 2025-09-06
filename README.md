@@ -21,19 +21,33 @@ O objetivo é **conectar pessoas a iniciativas verdes** e incentivar hábitos ma
 
 eco-sustentavel/
 │
+
 ├── index.html # Página inicial
+
 ├── pontos.html # Página do mapa
+
 ├── cadastro.html # Cadastro de pontos
+
 ├── dicas.html # Dicas sustentáveis
+
 ├── blog.html # Blog
+
 ├── calculadora.html # Calculadora de pegada de carbono
+
 ├── sobre.html # Página sobre o projeto
+
 ├── css/
+
 │ └── style.css # Arquivo de estilo
+
 ├── js/
+
 │ ├── mapa.js # Script do mapa interativo
+
 │ └── calculadora.js # Script da calculadora
+
 ├── img/ # Imagens e logo do projeto
+
 └── README.md # Este arquivo
 
 ---
@@ -104,7 +118,3 @@ LinkedIn: (https://www.linkedin.com/in/lucas-borges-7654b1247/)
 WhatsApp: +55 31 998101841
 
 ---
-
-Se você quiser, posso **criar a versão final do README com logo, cores e links reais do seu site** já prontos para GitHub.  
-
-Quer que eu faça isso?
